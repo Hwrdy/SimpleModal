@@ -1,0 +1,52 @@
+@import '../../styles/base';
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 900;
+  background-color: $black-a04;
+  animation: fadeIn 0.2s linear forwards;
+}
+
+.container {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+
+  .close-handle {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 17px;
+    height: 17px;
+    background: url('assets/icon-delete-stock.svg') center no-repeat;
+    background-size: 17px 17px;
+    cursor: pointer;
+    z-index: 999;
+
+    &:hover {
+      background: url('assets/icon-delete-stock-hover.svg') center no-repeat;
+      background-size: 17px 17px;
+    }
+  }
+}
